@@ -1,12 +1,11 @@
 import { useState } from "react";
-
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
-function Signup({ goToLogin, goToHome }) {
+function Signup({ goToHome, goToLogin }) {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -15,45 +14,38 @@ function Signup({ goToLogin, goToHome }) {
     const signup = async () => {
 
         if (name === "" || email === "" || password === "") {
-            alert("Please fill all fields");
+            alert("Fill all the fields");
             return;
         }
 
         try {
 
-            const res = await fetch(
-                "http://localhost:3000/signup",
-                {
-                    method: "POST",
+            const response = await fetch("http://localhost:3000/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password
+                })
+            });
 
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+            const data = await response.json();
 
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        password: password
-                    })
-                }
-            );
-
-            const data = await res.json();
-
-            if (!res.ok) {
-                alert(data.message);
-                return;
+            if (data.user) {
+                alert("Account created successfully");
+                goToLogin();
+            } else {
+                alert(data.message || "Failed to create account");
             }
-
-            alert("Registration Successful");
-
-            goToLogin();
 
         } catch (error) {
             console.log(error);
         }
-    };
 
+    };
 
     return (
         <Box
@@ -61,22 +53,25 @@ function Signup({ goToLogin, goToHome }) {
                 minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                px: 2,
+                backgroundColor: "#fff5f7"
             }}
         >
 
             <Paper
                 elevation={4}
                 sx={{
-                    width: 400,
-                    padding: 4,
+                    width: "100%",
+                    maxWidth: 420,
+                    padding: { xs: 3, sm: 4 },
                     borderRadius: 3
                 }}
             >
                 <Typography
                     variant="h4"
                     align="center"
-                    sx={{ mb: 3 }}
+                    sx={{ mb: 3, fontWeight: "bold" }}
                 >
                     Sign Up
                 </Typography>
@@ -99,20 +94,21 @@ function Signup({ goToLogin, goToHome }) {
                     sx={{ mb: 2 }}
                 />
 
-
                 <TextField
                     fullWidth
                     label="Password"
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    sx={{ mb: 2 }}
+                    sx={{ mb: 3 }}
                 />
+
                 <Button
                     fullWidth
                     variant="contained"
+                    size="large"
                     onClick={signup}
-                    sx={{ mb: 2 }}
+                    sx={{ mb: 2, py: 1.3, borderRadius: 2 }}
                 >
                     Sign Up
                 </Button>
@@ -120,20 +116,19 @@ function Signup({ goToLogin, goToHome }) {
                 <Box
                     sx={{
                         display: "flex",
-                        justifyContent: "center",
+                        flexDirection: "column",
+                        alignItems: "center",
                         gap: 1,
                         mt: 2
                     }}
                 >
-
-                    <Button onClick={goToHome}>
-                        Back to Home
-                    </Button>
-
-                    <Button onClick={goToLogin}>
+                    <Button size="small" onClick={goToLogin} sx={{ textTransform: "none" }}>
                         Already have an account? Login
                     </Button>
 
+                    <Button size="small" color="secondary" onClick={goToHome}>
+                        Back to Home
+                    </Button>
                 </Box>
 
             </Paper>

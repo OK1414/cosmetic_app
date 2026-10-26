@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Vitamin C Radiance Face Serum",
+    "description": "Brightening serum with 10% Vitamin C and Ferulic Acid to fade dark spots and boost glow.",
+    "price": 699,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Hyaluronic Acid Hydrating Gel Cream",
+    "description": "Ultra-lightweight oil-free moisturizer providing 72-hour deep skin hydration.",
+    "price": 549,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Niacinamide 10% Daily Pore Clarifying Serum",
+    "description": "Reduces enlarged pores, regulates excess oil, and clears blemishes for smooth skin.",
+    "price": 599,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Gentle Foaming Green Tea Face Cleanser",
+    "description": "Mild sulfate-free cleanser enriched with antioxidant-rich green tea and chamomile.",
+    "price": 349,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Ultra Matte Sunscreen Gel SPF 50 PA++++",
+    "description": "Non-greasy, broad-spectrum sunscreen with zero white cast and sweat-resistant formula.",
+    "price": 499,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Ceramide & Peptide Barrier Repair Cream",
+    "description": "Intense barrier restorative cream that heals damaged skin, dryness, and irritation.",
+    "price": 649,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Salicylic Acid 2% BHA Acne Cleanser",
+    "description": "Deep-cleansing exfoliator targeting blackheads, whiteheads, and active acne breakouts.",
+    "price": 399,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Overnight Retinol 0.3% Youth Renewal Cream",
+    "description": "Anti-aging night treatment that smoothens fine lines, wrinkles, and boosts cell renewal.",
+    "price": 799,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Rose Water & Witch Hazel Soothing Toner",
+    "description": "Alcohol-free calming toner that tightens open pores and balances skin pH.",
+    "price": 299,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "AHA 25% + BHA 2% Peeling Solution",
+    "description": "Weekly exfoliating facial treatment for luminous, salon-like glowing texture in 10 minutes.",
+    "price": 599,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Cica Calming Soothing Gel",
+    "description": "Infused with pure Centella Asiatica to quickly calm redness, sunburn, and skin irritation.",
+    "price": 449,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Caffeine & Peptide Under Eye Cream",
+    "description": "Lightens stubborn dark circles, reduces morning puffiness, and firms under-eye skin.",
+    "price": 499,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Snail Mucin 96% Power Repair Essence",
+    "description": "Intense restorative essence for repairing skin texture, elasticity, and dehydrated skin.",
+    "price": 899,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Tea Tree Oil Anti-Blemish Clarifying Face Wash",
+    "description": "Purifying face wash targeting acne-causing bacteria and preventing future breakouts.",
+    "price": 329,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Clay Detox & Charcoal Purifying Face Mask",
+    "description": "Draws out deep-seated impurities, unclogs congested pores, and brightens dull skin.",
+    "price": 449,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Alpha Arbutin 2% Dark Spot Corrector Serum",
+    "description": "Advanced hyperpigmentation formula that fades acne scars, sun damage, and melasma.",
+    "price": 649,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Squalane Nourishing Facial Oil",
+    "description": "100% plant-derived lightweight facial oil that locks in hydration without feeling greasy.",
+    "price": 599,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Hydrating Rice Water Essence Toner",
+    "description": "Milky nourishing toner inspired by Korean skincare for glass skin radiance and softness.",
+    "price": 499,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Papaya & AHA Gentle Exfoliating Face Scrub",
+    "description": "Natural enzyme scrub with micro-beads to gently remove dead skin cells and polish skin.",
+    "price": 349,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  },
+  {
+    "name": "Overnight Deep Recovery Sleeping Mask",
+    "description": "Intensive leave-on night mask with ceramides and probiotics for plump, energized skin by morning.",
+    "price": 549,
+    "categoryId": "6ada3532aaa9e2af115883a1"
+  }
+]
+

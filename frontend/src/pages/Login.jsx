@@ -49,7 +49,7 @@ function Login({ goToHome, goToSignup, goToAdminDashboard }) {
                 );
 
                 //store users info
-                localStorage.setItem("user", JSON.stringify(payload));
+               localStorage.setItem("user", JSON.stringify({ ...payload, name: data.user.name }));
 
                 alert("Login Successful");
 
@@ -75,15 +75,18 @@ function Login({ goToHome, goToSignup, goToAdminDashboard }) {
                 minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center" 
+                alignItems: "center",
+                px: 2,
+                backgroundColor: "#fff5f7"
             }}
         >
 
             <Paper
                 elevation={4}
                 sx={{
-                    width: 400,
-                    padding: 4,
+                    width: "100%",
+                    maxWidth: 420,
+                    padding: { xs: 3, sm: 4 },
                     borderRadius: 3
                 }}
             >
@@ -91,7 +94,7 @@ function Login({ goToHome, goToSignup, goToAdminDashboard }) {
                 <Typography
                     variant="h4"
                     align="center"
-                    sx={{ mb: 3 }}
+                    sx={{ mb: 3, fontWeight: "bold" }}
                 >
                     Login
                 </Typography>
@@ -117,39 +120,68 @@ function Login({ goToHome, goToSignup, goToAdminDashboard }) {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    sx={{ mb: 2 }}
+                    sx={{ mb: 3 }}
                 />
 
 
                 {/* Login Button */}
 
                 <Button
-                    fullWidth
                     variant="contained"
+                    fullWidth
+                    size="large"
                     onClick={login}
-                    sx={{ mb: 2 }}
+                    sx={{
+                        mb: 2,
+                        py: 1.3,
+                        borderRadius: 2
+                    }}
                 >
                     Login
                 </Button>
 
 
-                {/* Navigation Buttons */}
+                {/* Switch to Signup */}
 
                 <Box
                     sx={{
                         display: "flex",
                         justifyContent: "center",
-                        gap: 1,
+                        alignItems: "center"
+                    }}
+                >
+
+                    <Typography variant="body2">
+                        Don't have an account?
+                    </Typography>
+
+                    <Button
+                        size="small"
+                        onClick={goToSignup}
+                        sx={{ ml: 1, textTransform: "none" }}
+                    >
+                        Sign Up
+                    </Button>
+
+                </Box>
+
+
+                {/* Home Button */}
+
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
                         mt: 2
                     }}
                 >
 
-                    <Button onClick={goToHome}>
+                    <Button
+                        size="small"
+                        color="secondary"
+                        onClick={goToHome}
+                    >
                         Back to Home
-                    </Button>
-
-                    <Button onClick={goToSignup}>
-                        Create Account
                     </Button>
 
                 </Box>

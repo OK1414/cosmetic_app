@@ -5,10 +5,11 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MenuItem from "@mui/material/MenuItem";
 
 
-function AdminProduct() {
+function AdminProduct({ goToAdminDashboard }) {
 
     // ==========================================
     // FORM STATES
@@ -472,6 +473,18 @@ function AdminProduct() {
                 }
             }}
         >
+
+                        {/* BACK TO DASHBOARD BUTTON */}
+            <Box sx={{ mb: 3 }}>
+                <Button
+                    variant="outlined"
+                    startIcon={<ArrowBackIcon />}
+                    onClick={goToAdminDashboard}
+                    sx={{ borderRadius: 2, textTransform: "none", fontWeight: "bold" }}
+                >
+                    Back to Dashboard
+                </Button>
+            </Box>
 
             {/* ==================================
                 PAGE TITLE

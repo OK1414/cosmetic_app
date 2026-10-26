@@ -8,7 +8,7 @@ import Paper from "@mui/material/Paper";
 import Divider from "@mui/material/Divider";
 
 
-function Orders({ goToProducts }) {
+function Orders({ goToProducts, refreshCartCount }) {
 
     const [orders, setOrders] = useState([]);
 
@@ -31,9 +31,9 @@ function Orders({ goToProducts }) {
                 return;
             }
 
-            const response = await fetch(
-                "http://localhost:3000/myOrders",
-                {
+           const response = await fetch(
+    "http://localhost:3000/getMyOrders",
+    {
                     headers: {
                         Authorization: token
                     }
@@ -120,7 +120,6 @@ function Orders({ goToProducts }) {
                 }
             );
 
-
             const data = await response.json();
 
 
@@ -146,6 +145,10 @@ function Orders({ goToProducts }) {
             setCity("");
             setState("");
             setPincode("");
+
+            if (refreshCartCount) {
+                refreshCartCount();
+            }
 
 
             await getMyOrders();

@@ -109,6 +109,9 @@ export const getCart = async (req, res) => {
             });
         }
 
+        cart.items = cart.items.filter(item => item && item.product != null);
+        await cart.save();
+
         res.status(200).json({
             is_successful: true,
             data: cart
