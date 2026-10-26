@@ -46,7 +46,7 @@ function AdminProduct({ goToAdminDashboard }) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/getProduct"
+                "http://13.203.77.175:3000/getProduct"
             );
 
             const data = await response.json();
@@ -82,7 +82,7 @@ function AdminProduct({ goToAdminDashboard }) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/getCategory"
+                "http://13.203.77.175:3000/getCategory"
             );
 
             const data = await response.json();
@@ -184,7 +184,7 @@ function AdminProduct({ goToAdminDashboard }) {
 
                 const response = await fetch(
 
-                    `http://localhost:3000/updateProduct/${editId}`,
+                    `http://13.203.77.175:3000/updateProduct/${editId}`,
 
                     {
                         method: "PUT",
@@ -248,7 +248,7 @@ function AdminProduct({ goToAdminDashboard }) {
             // ======================================
 
             const response = await fetch(
-                "http://localhost:3000/product",
+                "http://13.203.77.175:3000/product",
                 {
                     method: "POST",
 
@@ -394,7 +394,7 @@ function AdminProduct({ goToAdminDashboard }) {
 
             const response = await fetch(
 
-                `http://localhost:3000/deleteProduct/${id}`,
+                `http://13.203.77.175:3000/deleteProduct/${id}`,
 
                 {
                     method: "DELETE",

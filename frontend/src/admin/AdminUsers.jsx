@@ -18,7 +18,7 @@ function AdminUsers({ goToAdminDashboard }) {
 
     const getUsers = async () => {
         try {
-            const response = await fetch("http://localhost:3000/getUsers");
+            const response = await fetch("http://13.203.77.175:3000/getUsers");
             const data = await response.json();
             if (data.is_successful) {
                 setUsers(data.data || []);

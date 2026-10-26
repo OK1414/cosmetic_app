@@ -34,7 +34,7 @@ function AdminOrders({ goToAdminDashboard }) {
                 return;
             }
 
-            const response = await fetch("http://localhost:3000/getOrder", {
+            const response = await fetch("http://13.203.77.175:3000/getOrder", {
                 headers: {
                     Authorization: token
                 }
@@ -58,7 +58,7 @@ function AdminOrders({ goToAdminDashboard }) {
     const handleStatusChange = async (orderId, newStatus) => {
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`http://localhost:3000/updateOrder/${orderId}`, {
+            const response = await fetch(`http://13.203.77.175:3000/updateOrder/${orderId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

@@ -30,7 +30,7 @@ function Cart({
             }
 
             const response = await fetch(
-                "http://localhost:3000/getCart",
+                "http://13.203.77.175:3000/getCart",
                 {
                     headers: {
                         Authorization: token
@@ -64,7 +64,7 @@ function Cart({
         try {
             const token = localStorage.getItem("token");
             const response = await fetch(
-                "http://localhost:3000/updateCartQuantity",
+                "http://13.203.77.175:3000/updateCartQuantity",
                 {
                     method: "PUT",
                     headers: {
@@ -109,7 +109,7 @@ function Cart({
         try {
             const token = localStorage.getItem("token");
             const response = await fetch(
-                "http://localhost:3000/removeFromCart",
+                "http://13.203.77.175:3000/removeFromCart",
                 {
                     method: "DELETE",
                     headers: {
@@ -141,7 +141,7 @@ function Cart({
         try {
             const token = localStorage.getItem("token");
             const response = await fetch(
-                "http://localhost:3000/clearCart",
+                "http://13.203.77.175:3000/clearCart",
                 {
                     method: "DELETE",
                     headers: {

@@ -28,7 +28,7 @@ function Product({
 
     const getProducts = async () => {
         try {
-            const response = await fetch("http://localhost:3000/getProduct");
+            const response = await fetch("http://13.203.77.175:3000/getProduct");
             const data = await response.json();
             if (data.is_successful) {
                 setProducts(data.data || []);
@@ -42,7 +42,7 @@ function Product({
 
     const getCategories = async () => {
         try {
-            const response = await fetch("http://localhost:3000/getCategory");
+            const response = await fetch("http://13.203.77.175:3000/getCategory");
             const data = await response.json();
             if (data.is_successful) {
                 setCategories(data.data || []);
@@ -60,7 +60,7 @@ function Product({
                 return;
             }
 
-            const response = await fetch("http://localhost:3000/addToCart", {
+            const response = await fetch("http://13.203.77.175:3000/addToCart", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

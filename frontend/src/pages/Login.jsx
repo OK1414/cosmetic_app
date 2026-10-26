@@ -21,7 +21,7 @@ function Login({ goToHome, goToSignup, goToAdminDashboard }) {
         try {
 
             const res = await fetch(
-                "http://localhost:3000/login",
+                "http://13.203.77.175:3000/login",
                 {
                     method: "POST",
 

@@ -28,7 +28,7 @@ function AdminCategories({ goToAdminDashboard }) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/getCategory"
+                "http://13.203.77.175:3000/getCategory"
             );
 
             const data = await response.json();
@@ -104,7 +104,7 @@ function AdminCategories({ goToAdminDashboard }) {
             if (editId) {
 
                 const response = await fetch(
-                    `http://localhost:3000/updateCategory/${editId}`,
+                    `http://13.203.77.175:3000/updateCategory/${editId}`,
                     {
                         method: "PUT",
 
@@ -160,7 +160,7 @@ function AdminCategories({ goToAdminDashboard }) {
             // ======================================
 
             const response = await fetch(
-                "http://localhost:3000/category",
+                "http://13.203.77.175:3000/category",
                 {
                     method: "POST",
 
@@ -283,7 +283,7 @@ function AdminCategories({ goToAdminDashboard }) {
         try {
 
             const response = await fetch(
-                `http://localhost:3000/deleteCategory/${id}`,
+                `http://13.203.77.175:3000/deleteCategory/${id}`,
                 {
                     method: "DELETE",
 

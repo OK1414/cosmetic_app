@@ -11,7 +11,7 @@ function Categories({ onSelectCategory }) {
 
     const getCategories = async () => {
         try {
-            const response = await fetch("http://localhost:3000/getCategory");
+            const response = await fetch("http://13.203.77.175:3000/getCategory");
             const data = await response.json();
             if (data.is_successful) {
                 setCategories(data.data || []);

@@ -32,7 +32,7 @@ function Orders({ goToProducts, refreshCartCount }) {
             }
 
            const response = await fetch(
-    "http://localhost:3000/getMyOrders",
+    "http://13.203.77.175:3000/getMyOrders",
     {
                     headers: {
                         Authorization: token
@@ -98,7 +98,7 @@ function Orders({ goToProducts, refreshCartCount }) {
 
 
             const response = await fetch(
-                "http://localhost:3000/order",
+                "http://13.203.77.175:3000/order",
                 {
                     method: "POST",
 

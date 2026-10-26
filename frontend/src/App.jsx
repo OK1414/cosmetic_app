@@ -49,7 +49,7 @@ function App() {
             }
 
             const response = await fetch(
-                "http://localhost:3000/getCart",
+                "http://13.203.77.175:3000/getCart",
                 {
                     headers: {
                         Authorization: token
